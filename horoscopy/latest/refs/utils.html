@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>freqt &mdash; horoscopy 0.1.0 documentation</title>
+  <title>utils &mdash; horoscopy 0.1.0 documentation</title>
   
 
   
@@ -36,8 +36,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="math" href="math.html" />
-    <link rel="prev" title="horoscopy" href="../index.html" /> 
+    <link rel="prev" title="mcep" href="mcep.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -84,10 +83,10 @@
             
               <p class="caption"><span class="caption-text">Package references</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">freqt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="freqt.html">freqt</a></li>
 <li class="toctree-l1"><a class="reference internal" href="math.html">math</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mcep.html">mcep</a></li>
-<li class="toctree-l1"><a class="reference internal" href="utils.html">utils</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">utils</a></li>
 </ul>
 
             
@@ -134,13 +133,13 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>freqt</li>
+      <li>utils</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/refs/freqt.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/refs/utils.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -153,38 +152,64 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="module-horoscopy.freqt">
-<span id="freqt"></span><h1>freqt<a class="headerlink" href="#module-horoscopy.freqt" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="module-horoscopy.utils">
+<span id="utils"></span><h1>utils<a class="headerlink" href="#module-horoscopy.utils" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
-<dt id="horoscopy.freqt.freqt">
-<code class="sig-prename descclassname">horoscopy.freqt.</code><code class="sig-name descname">freqt</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">C</span></em>, <em class="sig-param"><span class="n">M</span><span class="o">=</span><span class="default_value">24</span></em>, <em class="sig-param"><span class="n">alpha</span><span class="o">=</span><span class="default_value">0.42</span></em>, <em class="sig-param"><span class="n">recursive</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/horoscopy/freqt.html#freqt"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#horoscopy.freqt.freqt" title="Permalink to this definition">¶</a></dt>
-<dd><p>Perform frequency transform.</p>
+<dt id="horoscopy.utils.check_alpha">
+<code class="sig-prename descclassname">horoscopy.utils.</code><code class="sig-name descname">check_alpha</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">alpha</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/horoscopy/utils.html#check_alpha"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#horoscopy.utils.check_alpha" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether given alpha is valid or not.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>C</strong><span class="classifier">array_like [shape=(m + 1,) or (m + 1, T)]</span></dt><dd><p>Minimum phase sequence.</p>
+<dt><strong>alpha</strong><span class="classifier">float [scalar]</span></dt><dd><p>Frequency warping factor.</p>
 </dd>
-<dt><strong>M</strong><span class="classifier">int &gt;= 0 [scalar]</span></dt><dd><p>Order of warped sequence.</p>
+</dl>
 </dd>
-<dt><strong>alpha</strong><span class="classifier">float in (-1, 1) [scalar]</span></dt><dd><p>Frequency warping factor.</p>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="horoscopy.utils.read_binary">
+<code class="sig-prename descclassname">horoscopy.utils.</code><code class="sig-name descname">read_binary</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filename</span></em>, <em class="sig-param"><span class="n">dtype</span><span class="o">=</span><span class="default_value">'double'</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/horoscopy/utils.html#read_binary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#horoscopy.utils.read_binary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read a binary file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>filename</strong><span class="classifier">str</span></dt><dd><p>Filename to read.</p>
 </dd>
-<dt><strong>recursive</strong><span class="classifier">bool [scalar]</span></dt><dd><p>If True, use recursive algorithm instead of matrix multiplication.</p>
+<dt><strong>dtype</strong><span class="classifier">str</span></dt><dd><p>Input data type.</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl class="simple">
-<dt><strong>G</strong><span class="classifier">np.ndarray [shape=(M + 1), or (M + 1, T)]</span></dt><dd><p>Frequency warped sequence.</p>
+<dt><strong>data</strong><span class="classifier">np.ndarray</span></dt><dd><p>Loaded data.</p>
 </dd>
 </dl>
 </dd>
 </dl>
-<p class="rubric">References</p>
-<dl class="citation">
-<dt class="label" id="r8e8f54023914-1"><span class="brackets">1</span></dt>
-<dd><p>A. V. Oppenheim and D. H. Johnson, “Discrete representation of
-signals,” in Proceedings of the IEEE, vol. 60, no. 6, pp. 681-691,
-1972.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="horoscopy.utils.sr_to_alpha">
+<code class="sig-prename descclassname">horoscopy.utils.</code><code class="sig-name descname">sr_to_alpha</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sr</span></em>, <em class="sig-param"><span class="n">N</span><span class="o">=</span><span class="default_value">10</span></em>, <em class="sig-param"><span class="n">step</span><span class="o">=</span><span class="default_value">0.01</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/horoscopy/utils.html#sr_to_alpha"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#horoscopy.utils.sr_to_alpha" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute frequency warping factor under given sampling rate.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>sr</strong><span class="classifier">float &gt; 0 [scalar]</span></dt><dd><p>Sampling rate in Hz.</p>
+</dd>
+<dt><strong>N</strong><span class="classifier">int &gt;= 2 [scalar]</span></dt><dd><p>Number of sample points in the frequency domain.</p>
+</dd>
+<dt><strong>step</strong><span class="classifier">float &gt; 0 [scalar]</span></dt><dd><p>Step size used in grid search.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>alpha: float [scalar]</dt><dd><p>Frequency warping factor.</p>
+</dd>
+</dl>
 </dd>
 </dl>
 </dd></dl>
@@ -199,10 +224,8 @@ signals,” in Proceedings of the IEEE, vol. 60, no. 6, pp. 681-691,
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="math.html" class="btn btn-neutral float-right" title="math" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-      
-        <a href="../index.html" class="btn btn-neutral float-left" title="horoscopy" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="mcep.html" class="btn btn-neutral float-left" title="mcep" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
