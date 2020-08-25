@@ -1,0 +1,15 @@
+****
+SPTK
+****
+`SPTK` is a software for speech signal processing tools for UNIX environments.
+
+.. toctree::
+   :glob:
+   :maxdepth: 1
+   :caption: Package references
+
+   sub/*
+
+Indices
+=======
+* :ref:`genindex`
