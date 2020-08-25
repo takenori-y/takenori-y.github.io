@@ -152,6 +152,62 @@
             
   <div class="section" id="freqt">
 <h1>freqt<a class="headerlink" href="#freqt" title="Permalink to this headline">¶</a></h1>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Functions</p>
+<dl class="cpp function">
+<dt id="_CPPv44mainiA_Pc">
+<span id="_CPPv34mainiA_Pc"></span><span id="_CPPv24mainiA_Pc"></span><span id="main__i.cPA"></span><span class="target" id="freqt_8cc_1a0ddf1224851353fc92bfbff6f499fa97"></span>int <code class="sig-name descname">main</code><span class="sig-paren">(</span>int <em>argc</em>, char *<em>argv</em>[]<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv44mainiA_Pc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>freqt</em> [ <em>option</em> ] [ <em>infile</em> ]</p>
+<p><ul class="simple">
+<li><p><strong>-m</strong> <em>int</em> <ul>
+<li><p>order of minimum phase sequence <span class="math notranslate nohighlight">\((0 \le M_1)\)</span></p></li>
+</ul>
+</p></li>
+<li><p><strong>-M</strong> <em>int</em> <ul>
+<li><p>order of warped sequence <span class="math notranslate nohighlight">\((0 \le M_2)\)</span></p></li>
+</ul>
+</p></li>
+<li><p><strong>-a</strong> <em>double</em> <ul>
+<li><p>all-pass constant of input sequence <span class="math notranslate nohighlight">\((|\alpha_1|&lt;1)\)</span></p></li>
+</ul>
+</p></li>
+<li><p><strong>-A</strong> <em>double</em> <ul>
+<li><p>all-pass constant of output sequence <span class="math notranslate nohighlight">\((|\alpha_2|&lt;1)\)</span></p></li>
+</ul>
+</p></li>
+<li><p><strong>infile</strong> <em>str</em> <ul>
+<li><p>double-type minimum phase sequence</p></li>
+</ul>
+</p></li>
+<li><p><strong>stdout</strong> <ul>
+<li><p>double-type warped sequence</p></li>
+</ul>
+</p></li>
+</ul>
+</p>
+<p>The below example converts LPC coefficients into LPC mel-cepstral coefficients:</p>
+<p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lpc2c</span> <span class="o">&lt;</span> <span class="n">data</span><span class="o">.</span><span class="n">lpc</span> <span class="o">|</span> <span class="n">freqt</span> <span class="o">-</span><span class="n">A</span> <span class="mf">0.42</span> <span class="o">&gt;</span> <span class="n">data</span><span class="o">.</span><span class="n">lpcmc</span>
+</pre></div>
+</div>
+</p>
+<p>The converted LPC mel-cepstral coefficients in can be reverted if <span class="math notranslate nohighlight">\(M_2\)</span> is sufficiently greater than <span class="math notranslate nohighlight">\(M_1\)</span>:</p>
+<p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">freqt</span> <span class="o">-</span><span class="n">A</span> <span class="o">-</span><span class="mf">0.42</span> <span class="o">&lt;</span> <span class="n">data</span><span class="o">.</span><span class="n">lpcmc</span> <span class="o">&gt;</span> <span class="n">data</span><span class="o">.</span><span class="n">lpc</span>
+</pre></div>
+</div>
+</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>0 on success, 1 on false. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">argc</span></code>: Number of arguments. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[in]</span> <span class="pre">argv</span></code>: Argument vector. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
 <dl class="cpp class">
 <dt id="_CPPv4N4sptk18FrequencyTransformE">
 <span id="_CPPv3N4sptk18FrequencyTransformE"></span><span id="_CPPv2N4sptk18FrequencyTransformE"></span><span id="sptk::FrequencyTransform"></span><span class="target" id="classsptk_1_1FrequencyTransform"></span><em class="property">class </em><code class="sig-prename descclassname">sptk<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">FrequencyTransform</code><a class="headerlink" href="#_CPPv4N4sptk18FrequencyTransformE" title="Permalink to this definition">¶</a><br /></dt>
