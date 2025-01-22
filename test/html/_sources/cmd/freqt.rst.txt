@@ -1,5 +1,0 @@
-freqt
-=====
-
-.. doxygenclass:: sptk::FrequencyTransform
-   :members:
