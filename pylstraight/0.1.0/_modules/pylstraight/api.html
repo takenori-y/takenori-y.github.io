@@ -1,0 +1,1185 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pylstraight.api &#8212; pylstraight 0.1.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=01f34227"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/pylstraight/api';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">pylstraight 0.1.0 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../reference.html">
+    API reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../reference.html">
+    API reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">pylstraight.api</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for pylstraight.api</h1><div class="highlight"><pre>
+<span></span><span class="c1"># ------------------------------------------------------------------------ #</span>
+<span class="c1"># Copyright 2025 Takenori Yoshimura                                        #</span>
+<span class="c1">#                                                                          #</span>
+<span class="c1"># Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);          #</span>
+<span class="c1"># you may not use this file except in compliance with the License.         #</span>
+<span class="c1"># You may obtain a copy of the License at                                  #</span>
+<span class="c1">#                                                                          #</span>
+<span class="c1">#     http://www.apache.org/licenses/LICENSE-2.0                           #</span>
+<span class="c1">#                                                                          #</span>
+<span class="c1"># Unless required by applicable law or agreed to in writing, software      #</span>
+<span class="c1"># distributed under the License is distributed on an &quot;AS IS&quot; BASIS,        #</span>
+<span class="c1"># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. #</span>
+<span class="c1"># See the License for the specific language governing permissions and      #</span>
+<span class="c1"># limitations under the License.                                           #</span>
+<span class="c1"># ------------------------------------------------------------------------ #</span>
+
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">annotations</span>
+
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">TYPE_CHECKING</span><span class="p">,</span> <span class="n">Any</span>
+
+<span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">types</span> <span class="kn">import</span> <span class="n">SimpleNamespace</span>
+
+<span class="kn">import</span> <span class="nn">math</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">soundfile</span> <span class="k">as</span> <span class="nn">sf</span>
+
+<span class="kn">from</span> <span class="nn">.core.ap</span> <span class="kn">import</span> <span class="n">ApParam</span><span class="p">,</span> <span class="n">exstraightAPind</span>
+<span class="kn">from</span> <span class="nn">.core.f0</span> <span class="kn">import</span> <span class="n">F0Param</span><span class="p">,</span> <span class="n">MulticueF0v14</span>
+<span class="kn">from</span> <span class="nn">.core.sp</span> <span class="kn">import</span> <span class="n">SpParam</span><span class="p">,</span> <span class="n">exstraightspec</span>
+<span class="kn">from</span> <span class="nn">.core.syn</span> <span class="kn">import</span> <span class="n">SynParam</span><span class="p">,</span> <span class="n">exstraightsynth</span>
+<span class="kn">from</span> <span class="nn">.core.utils.misc</span> <span class="kn">import</span> <span class="n">get_fft_length</span><span class="p">,</span> <span class="n">normalize_waveform</span>
+
+
+<div class="viewcode-block" id="f0_to_f0">
+<a class="viewcode-back" href="../../api/conversion.html#pylstraight.f0_to_f0">[docs]</a>
+<span class="k">def</span> <span class="nf">f0_to_f0</span><span class="p">(</span>
+    <span class="n">f0</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">in_format</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">out_format</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">fs</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Convert F0 between different formats.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    f0 : np.ndarray [shape=(nframe,)]</span>
+<span class="sd">        The input F0.</span>
+
+<span class="sd">    in_format : [&#39;inverse&#39;, &#39;linear&#39;, &#39;log&#39;]</span>
+<span class="sd">        The format of the input F0.</span>
+
+<span class="sd">    out_format : [&#39;inverse&#39;, &#39;linear&#39;, &#39;log&#39;]</span>
+<span class="sd">        The format of the output F0.</span>
+
+<span class="sd">    fs : int</span>
+<span class="sd">        The sampling frequency in Hz. This is required when the input or output format</span>
+<span class="sd">        is &#39;pitch&#39;.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    out : np.ndarray [shape=(nframe,)]</span>
+<span class="sd">        The converted F0.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import pylstraight as pyls</span>
+<span class="sd">    &gt;&gt;&gt; import numpy as np</span>
+<span class="sd">    &gt;&gt;&gt; f0 = np.array([100, 200, 0, 400])</span>
+<span class="sd">    &gt;&gt;&gt; pyls.f0_to_f0(f0, &quot;linear&quot;, &quot;log&quot;)</span>
+<span class="sd">    array([ 4.60517019e+00,  5.29831737e+00, -1.00000000e+10,  5.99146455e+00])</span>
+<span class="sd">    &gt;&gt;&gt; pyls.f0_to_f0(f0, &quot;linear&quot;, &quot;inverse&quot;, fs=16000)</span>
+<span class="sd">    array([160.,  80.,   0.,  40.])</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">f0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;F0 must be an instance of numpy.ndarray.&quot;</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+    <span class="n">f0</span> <span class="o">=</span> <span class="n">f0</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">in_format</span> <span class="o">==</span> <span class="n">out_format</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">f0</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">in_format</span> <span class="o">==</span> <span class="s2">&quot;inverse&quot;</span> <span class="ow">or</span> <span class="n">out_format</span> <span class="o">==</span> <span class="s2">&quot;inverse&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">fs</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;Sampling frequency is required.&quot;</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+    <span class="n">voiced</span> <span class="o">=</span> <span class="n">f0</span> <span class="o">!=</span> <span class="p">(</span><span class="o">-</span><span class="mf">1e10</span> <span class="k">if</span> <span class="n">in_format</span> <span class="o">==</span> <span class="s2">&quot;log&quot;</span> <span class="k">else</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">voiced_func</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;inverse&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;linear&quot;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">fs</span> <span class="o">/</span> <span class="n">x</span><span class="p">,</span>
+            <span class="s2">&quot;log&quot;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">fs</span> <span class="o">/</span> <span class="n">x</span><span class="p">),</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;linear&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;inverse&quot;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">fs</span> <span class="o">/</span> <span class="n">x</span><span class="p">,</span>
+            <span class="s2">&quot;log&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;log&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;inverse&quot;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">fs</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">x</span><span class="p">),</span>
+            <span class="s2">&quot;linear&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="n">unvoiced</span> <span class="o">=</span> <span class="o">~</span><span class="n">voiced</span>
+    <span class="n">unvoiced_value</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1e10</span> <span class="k">if</span> <span class="n">out_format</span> <span class="o">==</span> <span class="s2">&quot;log&quot;</span> <span class="k">else</span> <span class="mi">0</span>
+
+    <span class="n">new_f0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty_like</span><span class="p">(</span><span class="n">f0</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">new_f0</span><span class="p">[</span><span class="n">voiced</span><span class="p">]</span> <span class="o">=</span> <span class="n">voiced_func</span><span class="p">[</span><span class="n">in_format</span><span class="p">][</span><span class="n">out_format</span><span class="p">](</span><span class="n">f0</span><span class="p">[</span><span class="n">voiced</span><span class="p">])</span>
+        <span class="n">new_f0</span><span class="p">[</span><span class="n">unvoiced</span><span class="p">]</span> <span class="o">=</span> <span class="n">unvoiced_value</span>
+    <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Invalid input/output format: </span><span class="si">{</span><span class="n">in_format</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">out_format</span><span class="si">}</span><span class="s2">.&quot;</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">err</span>
+    <span class="k">return</span> <span class="n">new_f0</span></div>
+
+
+
+<div class="viewcode-block" id="ap_to_ap">
+<a class="viewcode-back" href="../../api/conversion.html#pylstraight.ap_to_ap">[docs]</a>
+<span class="k">def</span> <span class="nf">ap_to_ap</span><span class="p">(</span><span class="n">ap</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">in_format</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">out_format</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Convert aperiodicity between different formats.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    ap : np.ndarray [shape=(nframe, nfreq)]</span>
+<span class="sd">        The input aperiodicity.</span>
+
+<span class="sd">    in_format : [&#39;a&#39;, &#39;p&#39;, &#39;a/p&#39;, &#39;p/a&#39;]</span>
+<span class="sd">        The format of the input aperiodicity.</span>
+
+<span class="sd">    out_format : [&#39;a&#39;, &#39;p&#39;, &#39;a/p&#39;, &#39;p/a&#39;]</span>
+<span class="sd">        The format of the output aperiodicity.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    out : np.ndarray [shape=(nframe, nfreq)]</span>
+<span class="sd">        The converted aperiodicity.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import pylstraight as pyls</span>
+<span class="sd">    &gt;&gt;&gt; import numpy as np</span>
+<span class="sd">    &gt;&gt;&gt; ap = np.array([[0.3, 0.5, 0.9]])</span>
+<span class="sd">    &gt;&gt;&gt; pyls.ap_to_ap(ap, &quot;a&quot;, &quot;p&quot;)</span>
+<span class="sd">    array([[0.7, 0.5, 0.1]])</span>
+<span class="sd">    &gt;&gt;&gt; pyls.ap_to_ap(ap, &quot;a&quot;, &quot;a/p&quot;)</span>
+<span class="sd">    array([[0.42857143, 1.        , 9.        ]])</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ap</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;Aperiodicity must be an instance of numpy.ndarray.&quot;</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+    <span class="n">ap</span> <span class="o">=</span> <span class="n">ap</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">in_format</span> <span class="o">==</span> <span class="n">out_format</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">ap</span>
+
+    <span class="n">func</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;p&quot;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">x</span><span class="p">,</span>
+            <span class="s2">&quot;a/p&quot;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">x</span><span class="p">),</span>
+            <span class="s2">&quot;p/a&quot;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">x</span><span class="p">)</span> <span class="o">/</span> <span class="n">x</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;p&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">x</span><span class="p">,</span>
+            <span class="s2">&quot;a/p&quot;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">x</span><span class="p">)</span> <span class="o">/</span> <span class="n">x</span><span class="p">,</span>
+            <span class="s2">&quot;p/a&quot;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">x</span><span class="p">),</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;a/p&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">x</span><span class="p">),</span>
+            <span class="s2">&quot;p&quot;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">x</span><span class="p">),</span>
+            <span class="s2">&quot;p/a&quot;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">x</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;p/a&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">x</span><span class="p">),</span>
+            <span class="s2">&quot;p&quot;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">x</span><span class="p">),</span>
+            <span class="s2">&quot;a/p&quot;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">x</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">new_ap</span> <span class="o">=</span> <span class="n">func</span><span class="p">[</span><span class="n">in_format</span><span class="p">][</span><span class="n">out_format</span><span class="p">](</span><span class="n">ap</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Invalid input/output format: </span><span class="si">{</span><span class="n">in_format</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">out_format</span><span class="si">}</span><span class="s2">.&quot;</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">err</span>
+    <span class="k">return</span> <span class="n">new_ap</span></div>
+
+
+
+<div class="viewcode-block" id="sp_to_sp">
+<a class="viewcode-back" href="../../api/conversion.html#pylstraight.sp_to_sp">[docs]</a>
+<span class="k">def</span> <span class="nf">sp_to_sp</span><span class="p">(</span><span class="n">sp</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">in_format</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">out_format</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Convert spectrum between different formats.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    sp : np.ndarray [shape=(nframe, nfreq)]</span>
+<span class="sd">        The input spectrum.</span>
+
+<span class="sd">    in_format : [&#39;db&#39;, &#39;log&#39;, &#39;linear&#39;, &#39;power&#39;]</span>
+<span class="sd">        The format of the input spectrum.</span>
+
+<span class="sd">    out_format : [&#39;db&#39;, &#39;log&#39;, &#39;linear&#39;, &#39;power&#39;]</span>
+<span class="sd">        The format of the output spectrum.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    out : np.ndarray [shape=(nframe, nfreq)]</span>
+<span class="sd">        The converted spectrum.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import pylstraight as pyls</span>
+<span class="sd">    &gt;&gt;&gt; import numpy as np</span>
+<span class="sd">    &gt;&gt;&gt; sp = np.array([[-10, 60, 0]])</span>
+<span class="sd">    &gt;&gt;&gt; pyls.sp_to_sp(sp, &quot;db&quot;, &quot;linear&quot;)</span>
+<span class="sd">    array([[3.16227766e-01, 1.00000000e+03, 1.00000000e+00]])</span>
+<span class="sd">    &gt;&gt;&gt; pyls.sp_to_sp(sp, &quot;db&quot;, &quot;log&quot;)</span>
+<span class="sd">    array([[-1.15129255,  6.90775528,  0.        ]])</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">sp</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;Spectrum must be an instance of numpy.ndarray.&quot;</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+    <span class="n">sp</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">in_format</span> <span class="o">==</span> <span class="n">out_format</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">sp</span>
+
+    <span class="n">func</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;db&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;log&quot;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">/</span> <span class="mi">20</span><span class="p">),</span>
+            <span class="s2">&quot;linear&quot;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">10</span> <span class="o">**</span> <span class="p">(</span><span class="n">x</span> <span class="o">/</span> <span class="mi">20</span><span class="p">),</span>
+            <span class="s2">&quot;power&quot;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">10</span> <span class="o">**</span> <span class="p">(</span><span class="n">x</span> <span class="o">/</span> <span class="mi">10</span><span class="p">),</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;log&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;db&quot;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">*</span> <span class="p">(</span><span class="mi">20</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">10</span><span class="p">)),</span>
+            <span class="s2">&quot;linear&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">,</span>
+            <span class="s2">&quot;power&quot;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">x</span><span class="p">),</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;linear&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;db&quot;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">20</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">x</span><span class="p">),</span>
+            <span class="s2">&quot;log&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">,</span>
+            <span class="s2">&quot;power&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">square</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;power&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;db&quot;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">x</span><span class="p">),</span>
+            <span class="s2">&quot;log&quot;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>
+            <span class="s2">&quot;linear&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">new_sp</span> <span class="o">=</span> <span class="n">func</span><span class="p">[</span><span class="n">in_format</span><span class="p">][</span><span class="n">out_format</span><span class="p">](</span><span class="n">sp</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Invalid input/output format: </span><span class="si">{</span><span class="n">in_format</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">out_format</span><span class="si">}</span><span class="s2">.&quot;</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">err</span>
+    <span class="k">return</span> <span class="n">new_sp</span></div>
+
+
+
+<div class="viewcode-block" id="init_f0_param">
+<a class="viewcode-back" href="../../api/analysis.html#pylstraight.init_f0_param">[docs]</a>
+<span class="k">def</span> <span class="nf">init_f0_param</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">F0Param</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Make a default F0 parameter set.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    out : F0Param</span>
+<span class="sd">        Control parameter set for the F0 extraction.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">F0Param</span><span class="p">()</span></div>
+
+
+
+<div class="viewcode-block" id="init_ap_param">
+<a class="viewcode-back" href="../../api/analysis.html#pylstraight.init_ap_param">[docs]</a>
+<span class="k">def</span> <span class="nf">init_ap_param</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">ApParam</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Make a default aperiodicity parameter set.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    out : ApParam</span>
+<span class="sd">        Control parameter set for the aperiodicity extraction.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">ApParam</span><span class="p">()</span></div>
+
+
+
+<div class="viewcode-block" id="init_sp_param">
+<a class="viewcode-back" href="../../api/analysis.html#pylstraight.init_sp_param">[docs]</a>
+<span class="k">def</span> <span class="nf">init_sp_param</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">SpParam</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Make a default spectrum parameter set.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    out : SpParam</span>
+<span class="sd">        Control parameter set for the spectrum extraction.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">SpParam</span><span class="p">()</span></div>
+
+
+
+<div class="viewcode-block" id="init_syn_param">
+<a class="viewcode-back" href="../../api/synthesis.html#pylstraight.init_syn_param">[docs]</a>
+<span class="k">def</span> <span class="nf">init_syn_param</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">SynParam</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Make a default synthesis parameter set.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    out : SynParam</span>
+<span class="sd">        Control parameter set for the synthesis.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">SynParam</span><span class="p">()</span></div>
+
+
+
+<div class="viewcode-block" id="extract_f0">
+<a class="viewcode-back" href="../../api/analysis.html#pylstraight.extract_f0">[docs]</a>
+<span class="k">def</span> <span class="nf">extract_f0</span><span class="p">(</span>
+    <span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span>
+    <span class="n">fs</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">,</span>
+    <span class="n">frame_shift</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">5.0</span><span class="p">,</span>
+    <span class="n">f0_range</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mf">40.0</span><span class="p">,</span> <span class="mf">400.0</span><span class="p">),</span>
+    <span class="n">f0_format</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;linear&quot;</span><span class="p">,</span>
+    <span class="n">f0_param</span><span class="p">:</span> <span class="n">F0Param</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">return_aux</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Extract F0 from waveform.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    x : np.ndarray [shape=(nsample,) or (nchannel, nsample)]</span>
+<span class="sd">        The input waveform. If multi-channel, it will be averaged.</span>
+
+<span class="sd">    fs : int</span>
+<span class="sd">        The sampling frequency in Hz.</span>
+
+<span class="sd">    frame_shift : float</span>
+<span class="sd">        The frame shift in msec.</span>
+
+<span class="sd">    f0_range : tuple[float, float]</span>
+<span class="sd">        The lower and upper bounds of F0 search in Hz.</span>
+
+<span class="sd">    f0_format : [&#39;inverse&#39;, &#39;linear&#39;, &#39;log&#39;]</span>
+<span class="sd">        The output format.</span>
+
+<span class="sd">    f0_param : F0Param or None</span>
+<span class="sd">        Control parameters for the F0 extraction. If given, override the other</span>
+<span class="sd">        parameters. You have full control and responsibility.</span>
+
+<span class="sd">    return_aux : bool</span>
+<span class="sd">        Whether to return the auxiliary outputs.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    f0 : np.ndarray [shape=(nframe,)]</span>
+<span class="sd">        The fundamental frequency.</span>
+
+<span class="sd">    auxouts : SimpleNamespace (optional)</span>
+<span class="sd">        The auxiliary outputs.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import pylstraight as pyls</span>
+<span class="sd">    &gt;&gt;&gt; import numpy as np</span>
+<span class="sd">    &gt;&gt;&gt; f, fs = 200, 16000</span>
+<span class="sd">    &gt;&gt;&gt; x = np.mod(2 * np.pi * f / fs * np.arange(600), 2 * np.pi) - np.pi</span>
+<span class="sd">    &gt;&gt;&gt; pyls.extract_f0(x, fs)</span>
+<span class="sd">    array([193.86025508, 198.46273078, 199.65873847, 199.98109482,</span>
+<span class="sd">           199.99103883, 199.99119509])</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">normalize_waveform</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+    <span class="n">f0_floor</span><span class="p">,</span> <span class="n">f0_ceil</span> <span class="o">=</span> <span class="n">f0_range</span>
+
+    <span class="k">if</span> <span class="n">fs</span> <span class="o">&lt;</span> <span class="mi">8000</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;Minimum sampling frequency is 8000 Hz.&quot;</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">frame_shift</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;Minimum frame shift is 1 ms.&quot;</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">f0_floor</span> <span class="o">&lt;</span> <span class="mi">40</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;Minimum F0 floor is 40 Hz.&quot;</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">fs</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">&lt;</span> <span class="n">f0_ceil</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;F0 ceil exceeds the Nyquist frequency.&quot;</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">f0_param</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">f0_param</span> <span class="o">=</span> <span class="n">init_f0_param</span><span class="p">()</span>
+        <span class="n">f0_param</span><span class="o">.</span><span class="n">f0_frame_update_interval</span> <span class="o">=</span> <span class="n">frame_shift</span>
+        <span class="n">f0_param</span><span class="o">.</span><span class="n">f0_search_lower_bound</span> <span class="o">=</span> <span class="n">f0_floor</span>
+        <span class="n">f0_param</span><span class="o">.</span><span class="n">f0_search_upper_bound</span> <span class="o">=</span> <span class="n">f0_ceil</span>
+
+    <span class="n">nvo</span> <span class="o">=</span> <span class="n">f0_param</span><span class="o">.</span><span class="n">number_of_channels_in_octave</span>
+    <span class="k">if</span> <span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log2</span><span class="p">(</span><span class="n">f0_ceil</span> <span class="o">/</span> <span class="n">f0_floor</span><span class="p">)</span> <span class="o">*</span> <span class="n">nvo</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;F0 search range is too narrow.&quot;</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+    <span class="n">f0</span><span class="p">,</span> <span class="n">vuv</span><span class="p">,</span> <span class="n">auxouts</span> <span class="o">=</span> <span class="n">MulticueF0v14</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">fs</span><span class="p">,</span> <span class="n">f0_param</span><span class="p">)</span>
+    <span class="n">f0</span> <span class="o">*=</span> <span class="n">vuv</span>
+    <span class="n">f0</span><span class="p">[</span><span class="n">f0_ceil</span> <span class="o">&lt;</span> <span class="n">f0</span><span class="p">]</span> <span class="o">=</span> <span class="n">f0_ceil</span>
+    <span class="n">f0</span> <span class="o">=</span> <span class="n">f0_to_f0</span><span class="p">(</span><span class="n">f0</span><span class="p">,</span> <span class="s2">&quot;linear&quot;</span><span class="p">,</span> <span class="n">f0_format</span><span class="p">,</span> <span class="n">fs</span><span class="o">=</span><span class="n">fs</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">return_aux</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">f0</span><span class="p">,</span> <span class="n">auxouts</span>
+
+    <span class="k">return</span> <span class="n">f0</span></div>
+
+
+
+<div class="viewcode-block" id="extract_ap">
+<a class="viewcode-back" href="../../api/analysis.html#pylstraight.extract_ap">[docs]</a>
+<span class="k">def</span> <span class="nf">extract_ap</span><span class="p">(</span>
+    <span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span>
+    <span class="n">fs</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">f0</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span>
+    <span class="n">aux</span><span class="p">:</span> <span class="n">SimpleNamespace</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">,</span>
+    <span class="n">frame_shift</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">5.0</span><span class="p">,</span>
+    <span class="n">ap_floor</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.001</span><span class="p">,</span>
+    <span class="n">f0_format</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;linear&quot;</span><span class="p">,</span>
+    <span class="n">ap_format</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span>
+    <span class="n">ap_param</span><span class="p">:</span> <span class="n">ApParam</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Extract aperiodicity from waveform.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    x : np.ndarray [shape=(nsample,) or (nchannel, nsample)]</span>
+<span class="sd">        The input waveform. If multi-channel, it will be averaged.</span>
+
+<span class="sd">    fs : int</span>
+<span class="sd">        The sampling frequency in Hz.</span>
+
+<span class="sd">    f0 : np.ndarray [shape=(nframe,)]</span>
+<span class="sd">        The fundamental frequency.</span>
+
+<span class="sd">    aux : SimpleNamespace or None</span>
+<span class="sd">        The auxiliary outputs from `extract_f0`.</span>
+
+<span class="sd">    frame_shift : float</span>
+<span class="sd">        The frame shift in msec.</span>
+
+<span class="sd">    ap_floor : float</span>
+<span class="sd">        The minimum value of aperiodicity.</span>
+
+<span class="sd">    f0_format : [&#39;inverse&#39;, &#39;linear&#39;, &#39;log&#39;]</span>
+<span class="sd">        The input format of the F0.</span>
+
+<span class="sd">    ap_format : [&#39;a&#39;, &#39;p&#39;, &#39;a/p&#39;, &#39;p/a&#39;]</span>
+<span class="sd">        The output format.</span>
+
+<span class="sd">    ap_param : ApParam or None</span>
+<span class="sd">        Control parameters for the aperiodicity extraction. If given, override the other</span>
+<span class="sd">        parameters. You have full control and responsibility.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    out : np.ndarray [shape=(nframe, nfreq)]</span>
+<span class="sd">        The aperiodicity.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import pylstraight as pyls</span>
+<span class="sd">    &gt;&gt;&gt; import numpy as np</span>
+<span class="sd">    &gt;&gt;&gt; f, fs = 200, 16000</span>
+<span class="sd">    &gt;&gt;&gt; x = np.sin(2 * np.pi * f / fs * np.arange(640))</span>
+<span class="sd">    &gt;&gt;&gt; f0 = np.ones(8) * f</span>
+<span class="sd">    &gt;&gt;&gt; ap = pyls.extract_ap(x, fs, f0)</span>
+<span class="sd">    &gt;&gt;&gt; ap.shape</span>
+<span class="sd">    (8, 1025)</span>
+<span class="sd">    &gt;&gt;&gt; ap.mean(0)</span>
+<span class="sd">    array([0.17473351, 0.1747341 , 0.17473478, ..., 0.66521378, 0.66521439,</span>
+<span class="sd">           0.66521501])</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">normalize_waveform</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">fs</span> <span class="o">&lt;</span> <span class="mi">8000</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;Minimum sampling frequency is 8000 Hz.&quot;</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">frame_shift</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;Minimum frame shift is 1 ms.&quot;</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">ap_param</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">ap_param</span> <span class="o">=</span> <span class="n">init_ap_param</span><span class="p">()</span>
+        <span class="n">ap_param</span><span class="o">.</span><span class="n">periodicity_frame_update_interval</span> <span class="o">=</span> <span class="n">frame_shift</span>
+        <span class="n">ap_param</span><span class="o">.</span><span class="n">f0_frame_update_interval</span> <span class="o">=</span> <span class="n">frame_shift</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">f0</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;The length of F0 is too short.&quot;</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+    <span class="n">frame_shift_in_sample</span> <span class="o">=</span> <span class="n">fs</span> <span class="o">*</span> <span class="n">ap_param</span><span class="o">.</span><span class="n">f0_frame_update_interval</span> <span class="o">/</span> <span class="mi">1000</span>
+    <span class="n">expected_f0_length</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">/</span> <span class="n">frame_shift_in_sample</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">expected_f0_length</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">&lt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">f0</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">expected_f0_length</span> <span class="o">+</span> <span class="mi">2</span><span class="p">):</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="s2">&quot;The length of F0 is not consistent with the input waveform: &quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;input </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">f0</span><span class="p">)</span><span class="si">}</span><span class="s2"> vs expected </span><span class="si">{</span><span class="n">expected_f0_length</span><span class="si">}</span><span class="s2">.&quot;</span>
+        <span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+    <span class="n">ap</span> <span class="o">=</span> <span class="n">exstraightAPind</span><span class="p">(</span>
+        <span class="n">x</span><span class="p">,</span>
+        <span class="n">fs</span><span class="p">,</span>
+        <span class="n">f0_to_f0</span><span class="p">(</span><span class="n">f0</span><span class="p">,</span> <span class="n">f0_format</span><span class="p">,</span> <span class="s2">&quot;linear&quot;</span><span class="p">,</span> <span class="n">fs</span><span class="o">=</span><span class="n">fs</span><span class="p">),</span>
+        <span class="kc">None</span> <span class="k">if</span> <span class="n">aux</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">aux</span><span class="o">.</span><span class="n">refined_cn</span><span class="p">,</span>
+        <span class="n">ap_param</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">ap</span> <span class="o">=</span> <span class="n">sp_to_sp</span><span class="p">(</span><span class="n">ap</span><span class="p">,</span> <span class="s2">&quot;db&quot;</span><span class="p">,</span> <span class="s2">&quot;linear&quot;</span><span class="p">)</span>
+    <span class="n">ap</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">ap</span><span class="p">,</span> <span class="n">ap_floor</span><span class="p">,</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">ap_floor</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ap_to_ap</span><span class="p">(</span><span class="n">ap</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="n">ap_format</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="extract_sp">
+<a class="viewcode-back" href="../../api/analysis.html#pylstraight.extract_sp">[docs]</a>
+<span class="k">def</span> <span class="nf">extract_sp</span><span class="p">(</span>
+    <span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span>
+    <span class="n">fs</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">f0</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">,</span>
+    <span class="n">frame_shift</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">5.0</span><span class="p">,</span>
+    <span class="n">f0_format</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;linear&quot;</span><span class="p">,</span>
+    <span class="n">sp_format</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;linear&quot;</span><span class="p">,</span>
+    <span class="n">sp_param</span><span class="p">:</span> <span class="n">SpParam</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Extract spectrum from waveform.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    x : np.ndarray [shape=(nsample,) or (nchannel, nsample)]</span>
+<span class="sd">        The input waveform. If multi-channel, it will be averaged.</span>
+
+<span class="sd">    fs : int</span>
+<span class="sd">        The sampling frequency in Hz.</span>
+
+<span class="sd">    f0 : np.ndarray [shape=(nframe,)]</span>
+<span class="sd">        The fundamental frequency.</span>
+
+<span class="sd">    frame_shift : float</span>
+<span class="sd">        The frame shift in msec.</span>
+
+<span class="sd">    f0_format : [&#39;inverse&#39;, &#39;linear&#39;, &#39;log&#39;]</span>
+<span class="sd">        The input format of the F0.</span>
+
+<span class="sd">    sp_format : [&#39;db&#39;, &#39;log&#39;, &#39;linear&#39;, &#39;power&#39;]</span>
+<span class="sd">        The output format.</span>
+
+<span class="sd">    sp_param : SpParam or None</span>
+<span class="sd">        Control parameters for the spectrum extraction. If given, override the other</span>
+<span class="sd">        parameters. You have full control and responsibility.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    out : np.ndarray [shape=(nframe, nfreq)]</span>
+<span class="sd">        The spectrum.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import pylstraight as pyls</span>
+<span class="sd">    &gt;&gt;&gt; import numpy as np</span>
+<span class="sd">    &gt;&gt;&gt; f, fs = 200, 16000</span>
+<span class="sd">    &gt;&gt;&gt; x = np.sin(2 * np.pi * f / fs * np.arange(640))</span>
+<span class="sd">    &gt;&gt;&gt; f0 = np.ones(8) * f</span>
+<span class="sd">    &gt;&gt;&gt; sp = pyls.extract_sp(x, fs, f0, sp_format=&#39;db&#39;)</span>
+<span class="sd">    &gt;&gt;&gt; sp.shape</span>
+<span class="sd">    (8, 1025)</span>
+<span class="sd">    &gt;&gt;&gt; sp.mean(0)</span>
+<span class="sd">    array([  9.3790045 ,   9.3959332 ,   9.44756499, ..., -74.57928489,</span>
+<span class="sd">           -74.57916264, -74.57908274])</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">scaler</span> <span class="o">=</span> <span class="n">normalize_waveform</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">fs</span> <span class="o">&lt;</span> <span class="mi">8000</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;Minimum sampling frequency is 8000 Hz.&quot;</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">frame_shift</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;Minimum frame shift is 1 ms.&quot;</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">sp_param</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">sp_param</span> <span class="o">=</span> <span class="n">init_sp_param</span><span class="p">()</span>
+        <span class="n">sp_param</span><span class="o">.</span><span class="n">spectral_update_interval</span> <span class="o">=</span> <span class="n">frame_shift</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">f0</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;The length of F0 is too short.&quot;</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+    <span class="n">frame_shift_in_sample</span> <span class="o">=</span> <span class="n">fs</span> <span class="o">*</span> <span class="n">sp_param</span><span class="o">.</span><span class="n">spectral_update_interval</span> <span class="o">/</span> <span class="mi">1000</span>
+    <span class="n">expected_f0_length</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">/</span> <span class="n">frame_shift_in_sample</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">expected_f0_length</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">&lt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">f0</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">expected_f0_length</span> <span class="o">+</span> <span class="mi">2</span><span class="p">):</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="s2">&quot;The length of F0 is not consistent with the input waveform: &quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;input </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">f0</span><span class="p">)</span><span class="si">}</span><span class="s2"> vs expected </span><span class="si">{</span><span class="n">expected_f0_length</span><span class="si">}</span><span class="s2">.&quot;</span>
+        <span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+    <span class="n">sp</span> <span class="o">=</span> <span class="n">exstraightspec</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">f0_to_f0</span><span class="p">(</span><span class="n">f0</span><span class="p">,</span> <span class="n">f0_format</span><span class="p">,</span> <span class="s2">&quot;linear&quot;</span><span class="p">,</span> <span class="n">fs</span><span class="o">=</span><span class="n">fs</span><span class="p">),</span> <span class="n">fs</span><span class="p">,</span> <span class="n">sp_param</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">scaler</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">sp</span> <span class="o">*=</span> <span class="n">scaler</span>
+    <span class="k">return</span> <span class="n">sp_to_sp</span><span class="p">(</span><span class="n">sp</span><span class="p">,</span> <span class="s2">&quot;linear&quot;</span><span class="p">,</span> <span class="n">sp_format</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="synthesize">
+<a class="viewcode-back" href="../../api/synthesis.html#pylstraight.synthesize">[docs]</a>
+<span class="k">def</span> <span class="nf">synthesize</span><span class="p">(</span>
+    <span class="n">f0</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span>
+    <span class="n">ap</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span>
+    <span class="n">sp</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span>
+    <span class="n">fs</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">,</span>
+    <span class="n">frame_shift</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">5.0</span><span class="p">,</span>
+    <span class="n">f0_format</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;linear&quot;</span><span class="p">,</span>
+    <span class="n">ap_format</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span>
+    <span class="n">sp_format</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;linear&quot;</span><span class="p">,</span>
+    <span class="n">syn_param</span><span class="p">:</span> <span class="n">SynParam</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Synthesize waveform from F0, aperiodicity, and spectrum.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    f0 : np.ndarray [shape=(nframe,)]</span>
+<span class="sd">        The fundamental frequency.</span>
+
+<span class="sd">    ap : np.ndarray [shape=(nframe, nfreq)]</span>
+<span class="sd">        The aperiodicity.</span>
+
+<span class="sd">    sp : np.ndarray [shape=(nframe, nfreq)]</span>
+<span class="sd">        The spectrum.</span>
+
+<span class="sd">    fs : int</span>
+<span class="sd">        The sampling frequency in Hz.</span>
+
+<span class="sd">    frame_shift : float</span>
+<span class="sd">        The frame shift in msec.</span>
+
+<span class="sd">    f0_format : [&#39;inverse&#39;, &#39;linear&#39;, &#39;log&#39;]</span>
+<span class="sd">        The format of F0.</span>
+
+<span class="sd">    ap_format : [&#39;a&#39;, &#39;p&#39;, &#39;a/p&#39;, &#39;p/a&#39;]</span>
+<span class="sd">        The format of aperiodicity.</span>
+
+<span class="sd">    sp_format : [&#39;db&#39;, &#39;log&#39;, &#39;linear&#39;, &#39;power&#39;]</span>
+<span class="sd">        The format of spectrum.</span>
+
+<span class="sd">    syn_param : SynParam or None</span>
+<span class="sd">        Control parameters for the synthesis. If given, override the other parameters.</span>
+<span class="sd">        You have full control and responsibility.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    out : np.ndarray [shape=(nsample,)]</span>
+<span class="sd">        The synthesized waveform.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import pylstraight as pyls</span>
+<span class="sd">    &gt;&gt;&gt; import numpy as np</span>
+<span class="sd">    &gt;&gt;&gt; f, fs = 200, 16000</span>
+<span class="sd">    &gt;&gt;&gt; x = np.sin(2 * np.pi * f / fs * np.arange(2400)) / 2</span>
+<span class="sd">    &gt;&gt;&gt; f0 = np.ones(30) * f</span>
+<span class="sd">    &gt;&gt;&gt; ap = pyls.extract_ap(x, fs, f0)</span>
+<span class="sd">    &gt;&gt;&gt; sp = pyls.extract_sp(x, fs, f0)</span>
+<span class="sd">    &gt;&gt;&gt; y = pyls.synthesize(f0, ap, sp, fs)</span>
+<span class="sd">    &gt;&gt;&gt; y.shape</span>
+<span class="sd">    (2400,)</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">fs</span> <span class="o">&lt;</span> <span class="mi">8000</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;Minimum sampling frequency is 8000 Hz.&quot;</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">frame_shift</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;Minimum frame shift is 1 ms.&quot;</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">f0</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;The length of F0 is too short.&quot;</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">ap</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">sp</span><span class="p">):</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="s2">&quot;The lengths of aperiodicity and spectrum are not consistent: &quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;ap </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">ap</span><span class="p">)</span><span class="si">}</span><span class="s2"> vs sp </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">sp</span><span class="p">)</span><span class="si">}</span><span class="s2">.&quot;</span>
+        <span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">syn_param</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">syn_param</span> <span class="o">=</span> <span class="n">init_syn_param</span><span class="p">()</span>
+        <span class="n">syn_param</span><span class="o">.</span><span class="n">spectral_update_interval</span> <span class="o">=</span> <span class="n">frame_shift</span>
+
+    <span class="k">return</span> <span class="n">exstraightsynth</span><span class="p">(</span>
+        <span class="n">f0_to_f0</span><span class="p">(</span><span class="n">f0</span><span class="p">,</span> <span class="n">f0_format</span><span class="p">,</span> <span class="s2">&quot;linear&quot;</span><span class="p">,</span> <span class="n">fs</span><span class="o">=</span><span class="n">fs</span><span class="p">),</span>
+        <span class="n">sp_to_sp</span><span class="p">(</span><span class="n">sp</span><span class="p">,</span> <span class="n">sp_format</span><span class="p">,</span> <span class="s2">&quot;linear&quot;</span><span class="p">),</span>
+        <span class="n">sp_to_sp</span><span class="p">(</span><span class="n">ap_to_ap</span><span class="p">(</span><span class="n">ap</span><span class="p">,</span> <span class="n">ap_format</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">),</span> <span class="s2">&quot;linear&quot;</span><span class="p">,</span> <span class="s2">&quot;db&quot;</span><span class="p">),</span>
+        <span class="n">fs</span><span class="p">,</span>
+        <span class="n">syn_param</span><span class="p">,</span>
+    <span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="fromfile">
+<a class="viewcode-back" href="../../api/data.html#pylstraight.fromfile">[docs]</a>
+<span class="k">def</span> <span class="nf">fromfile</span><span class="p">(</span>
+    <span class="n">filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">fs</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">,</span>
+    <span class="n">frame_length</span><span class="p">:</span> <span class="nb">float</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">dtype</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Read a STRAIGHT parameter from file.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    filename : str</span>
+<span class="sd">        The file to read.</span>
+
+<span class="sd">    fs : int</span>
+<span class="sd">        The sampling frequency in Hz. If non-positive, the data is assumed to be F0,</span>
+<span class="sd">        otherwise spectrum.</span>
+
+<span class="sd">    frame_length : float</span>
+<span class="sd">        The frame length in msec. If None, the default value is used.</span>
+
+<span class="sd">    dtype : np.dtype</span>
+<span class="sd">        The data type of the file.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    out : np.ndarray [shape=(nframe,)] or [shape=(nframe, nfreq)]</span>
+<span class="sd">        The STRAIGHT parameter.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import pylstraight as pyls</span>
+<span class="sd">    &gt;&gt;&gt; f0 = pyls.fromfile(&quot;tests/references/data.f0&quot;)</span>
+<span class="sd">    &gt;&gt;&gt; f0.shape</span>
+<span class="sd">    (239,)</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">fromfile</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">)</span>
+    <span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;</span> <span class="n">fs</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">frame_length</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">frame_length</span> <span class="o">=</span> <span class="n">SpParam</span><span class="p">()</span><span class="o">.</span><span class="n">default_frame_length</span>
+        <span class="n">dim</span> <span class="o">=</span> <span class="n">get_fft_length</span><span class="p">(</span><span class="n">fs</span><span class="p">,</span> <span class="n">frame_length</span><span class="p">,</span> <span class="s2">&quot;one-sided&quot;</span><span class="p">)</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">dim</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">data</span></div>
+
+
+
+<div class="viewcode-block" id="read">
+<a class="viewcode-back" href="../../api/data.html#pylstraight.read">[docs]</a>
+<span class="k">def</span> <span class="nf">read</span><span class="p">(</span><span class="n">filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Read audio file. This is the simple wrapper of `soundfile.read`.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    filename : str</span>
+<span class="sd">        The path to the input file.</span>
+
+<span class="sd">    **kwargs : Any</span>
+<span class="sd">        Keyword arguments passed to `soundfile.read`.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    x : np.ndarray [shape=(nsample,) or (nchannel, nsample)]</span>
+<span class="sd">        The audio signal.</span>
+
+<span class="sd">    fs : int</span>
+<span class="sd">        The sampling frequency in Hz.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import pylstraight as pyls</span>
+<span class="sd">    &gt;&gt;&gt; x, fs = pyls.read(&quot;assets/data.wav&quot;)</span>
+<span class="sd">    &gt;&gt;&gt; x.shape, fs</span>
+<span class="sd">    ((19200,), 16000)</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">fs</span> <span class="o">=</span> <span class="n">sf</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">x</span><span class="p">,</span> <span class="n">fs</span></div>
+
+
+
+<div class="viewcode-block" id="write">
+<a class="viewcode-back" href="../../api/data.html#pylstraight.write">[docs]</a>
+<span class="k">def</span> <span class="nf">write</span><span class="p">(</span><span class="n">filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">fs</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Write audio file. This is the simple wrapper of `soundfile.write`.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    filename : str</span>
+<span class="sd">        The path to the output file.</span>
+
+<span class="sd">    x : np.ndarray [shape=(nsample,) or (nchannel, nsample)]</span>
+<span class="sd">        The audio signal.</span>
+
+<span class="sd">    fs : int</span>
+<span class="sd">        The sampling frequency in Hz.</span>
+
+<span class="sd">    **kwargs : Any</span>
+<span class="sd">        Keyword arguments passed to `soundfile.write`.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import pylstraight as pyls</span>
+<span class="sd">    &gt;&gt;&gt; x, fs = pyls.read(&quot;assets/data.wav&quot;)</span>
+<span class="sd">    &gt;&gt;&gt; pyls.write(&quot;copy.wav&quot;, x, fs)</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">sf</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">fs</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2025, Takenori Yoshimura.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
