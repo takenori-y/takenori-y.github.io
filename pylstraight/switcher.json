@@ -1,0 +1,14 @@
+[
+    {
+	"version": "latest",
+        "url": "https://takenori-y.github.io/pylstraight/latest/"
+    },
+    {
+        "version": "0.1.1",
+        "url": "https://takenori-y.github.io/pylstraight/0.1.1/"
+    },
+    {
+        "version": "0.1.0",
+        "url": "https://takenori-y.github.io/pylstraight/0.1.0/"
+    }
+]
