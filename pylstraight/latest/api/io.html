@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Conversion &#8212; pylstraight 0.1.1 documentation</title>
+    <title>I/O &#8212; pylstraight 0.1.1 documentation</title>
   
   
   
@@ -41,7 +41,7 @@
     <script src="../_static/documentation_options.js?v=a58bc63e"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'api/conversion';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api/io';</script>
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://takenori-y.github.io/pylstraight/switcher.json';
@@ -51,8 +51,8 @@
         </script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="I/O" href="io.html" />
-    <link rel="prev" title="Synthesis" href="synthesis.html" />
+    <link rel="next" title="Constants" href="constants.html" />
+    <link rel="prev" title="Conversion" href="conversion.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -322,8 +322,8 @@
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="analysis.html">Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="synthesis.html">Synthesis</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Conversion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="io.html">I/O</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conversion.html">Conversion</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">I/O</a></li>
 <li class="toctree-l1"><a class="reference internal" href="constants.html">Constants</a></li>
 </ul>
 </div>
@@ -368,7 +368,7 @@
     
     <li class="breadcrumb-item"><a href="../reference.html" class="nav-link">pylstraight API</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Conversion</span></li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">I/O</span></li>
   </ul>
 </nav>
 </div>
@@ -385,109 +385,97 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="conversion">
-<h1>Conversion<a class="headerlink" href="#conversion" title="Link to this heading">#</a></h1>
+  <section id="i-o">
+<h1>I/O<a class="headerlink" href="#i-o" title="Link to this heading">#</a></h1>
 <dl class="py function">
-<dt class="sig sig-object py" id="pylstraight.f0_to_f0">
-<span class="sig-prename descclassname"><span class="pre">pylstraight.</span></span><span class="sig-name descname"><span class="pre">f0_to_f0</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_format</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_format</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="reference internal" href="../_modules/pylstraight/api.html#f0_to_f0"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pylstraight.f0_to_f0" title="Link to this definition">#</a></dt>
-<dd><p>Convert F0 between different formats.</p>
+<dt class="sig sig-object py" id="pylstraight.read">
+<span class="sig-prename descclassname"><span class="pre">pylstraight.</span></span><span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">ndarray</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/pylstraight/api.html#read"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pylstraight.read" title="Link to this definition">#</a></dt>
+<dd><p>Read audio file. This is the simple wrapper of <cite>soundfile.read</cite>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>f0</strong><span class="classifier">np.ndarray [shape=(nframe,)]</span></dt><dd><p>The input F0.</p>
+<dt><strong>filename</strong><span class="classifier">str</span></dt><dd><p>The path to the input file.</p>
 </dd>
-<dt><strong>in_format</strong><span class="classifier">[‘inverse’, ‘linear’, ‘log’]</span></dt><dd><p>The format of the input F0.</p>
-</dd>
-<dt><strong>out_format</strong><span class="classifier">[‘inverse’, ‘linear’, ‘log’]</span></dt><dd><p>The format of the output F0.</p>
-</dd>
-<dt><strong>fs</strong><span class="classifier">int</span></dt><dd><p>The sampling frequency in Hz. This is required when the input or output format
-is <em>inverse</em>.</p>
+<dt><strong>**kwargs</strong><span class="classifier">Any</span></dt><dd><p>Keyword arguments passed to <cite>soundfile.read</cite>.</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
-<dt><strong>out</strong><span class="classifier">np.ndarray [shape=(nframe,)]</span></dt><dd><p>The converted F0.</p>
+<dt><strong>x</strong><span class="classifier">np.ndarray [shape=(nsample,) or (nchannel, nsample)]</span></dt><dd><p>The audio signal.</p>
+</dd>
+<dt><strong>fs</strong><span class="classifier">int</span></dt><dd><p>The sampling frequency in Hz.</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">pylstraight</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pyls</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">f0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">400</span><span class="p">])</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">pyls</span><span class="o">.</span><span class="n">f0_to_f0</span><span class="p">(</span><span class="n">f0</span><span class="p">,</span> <span class="s2">&quot;linear&quot;</span><span class="p">,</span> <span class="s2">&quot;log&quot;</span><span class="p">)</span>
-<span class="go">array([ 4.60517019e+00,  5.29831737e+00, -1.00000000e+10,  5.99146455e+00])</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">pyls</span><span class="o">.</span><span class="n">f0_to_f0</span><span class="p">(</span><span class="n">f0</span><span class="p">,</span> <span class="s2">&quot;linear&quot;</span><span class="p">,</span> <span class="s2">&quot;inverse&quot;</span><span class="p">,</span> <span class="n">fs</span><span class="o">=</span><span class="mi">16000</span><span class="p">)</span>
-<span class="go">array([160.,  80.,   0.,  40.])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="p">,</span> <span class="n">fs</span> <span class="o">=</span> <span class="n">pyls</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;assets/data.wav&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">fs</span>
+<span class="go">((19200,), 16000)</span>
 </pre></div>
 </div>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="pylstraight.ap_to_ap">
-<span class="sig-prename descclassname"><span class="pre">pylstraight.</span></span><span class="sig-name descname"><span class="pre">ap_to_ap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ap</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_format</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_format</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="reference internal" href="../_modules/pylstraight/api.html#ap_to_ap"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pylstraight.ap_to_ap" title="Link to this definition">#</a></dt>
-<dd><p>Convert aperiodicity between different formats.</p>
+<dt class="sig sig-object py" id="pylstraight.write">
+<span class="sig-prename descclassname"><span class="pre">pylstraight.</span></span><span class="sig-name descname"><span class="pre">write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../_modules/pylstraight/api.html#write"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pylstraight.write" title="Link to this definition">#</a></dt>
+<dd><p>Write audio file. This is the simple wrapper of <cite>soundfile.write</cite>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>ap</strong><span class="classifier">np.ndarray [shape=(nframe, nfreq)]</span></dt><dd><p>The input aperiodicity.</p>
+<dt><strong>filename</strong><span class="classifier">str</span></dt><dd><p>The path to the output file.</p>
 </dd>
-<dt><strong>in_format</strong><span class="classifier">[‘a’, ‘p’, ‘a/p’, ‘p/a’]</span></dt><dd><p>The format of the input aperiodicity.</p>
+<dt><strong>x</strong><span class="classifier">np.ndarray [shape=(nsample,) or (nchannel, nsample)]</span></dt><dd><p>The audio signal.</p>
 </dd>
-<dt><strong>out_format</strong><span class="classifier">[‘a’, ‘p’, ‘a/p’, ‘p/a’]</span></dt><dd><p>The format of the output aperiodicity.</p>
+<dt><strong>fs</strong><span class="classifier">int</span></dt><dd><p>The sampling frequency in Hz.</p>
 </dd>
-</dl>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><dl class="simple">
-<dt><strong>out</strong><span class="classifier">np.ndarray [shape=(nframe, nfreq)]</span></dt><dd><p>The converted aperiodicity.</p>
+<dt><strong>**kwargs</strong><span class="classifier">Any</span></dt><dd><p>Keyword arguments passed to <cite>soundfile.write</cite>.</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">pylstraight</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pyls</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ap</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">]])</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">pyls</span><span class="o">.</span><span class="n">ap_to_ap</span><span class="p">(</span><span class="n">ap</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;p&quot;</span><span class="p">)</span>
-<span class="go">array([[0.7, 0.5, 0.1]])</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">pyls</span><span class="o">.</span><span class="n">ap_to_ap</span><span class="p">(</span><span class="n">ap</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;a/p&quot;</span><span class="p">)</span>
-<span class="go">array([[0.42857143, 1.        , 9.        ]])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="p">,</span> <span class="n">fs</span> <span class="o">=</span> <span class="n">pyls</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;assets/data.wav&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pyls</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;copy.wav&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">fs</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;copy.wav&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="pylstraight.sp_to_sp">
-<span class="sig-prename descclassname"><span class="pre">pylstraight.</span></span><span class="sig-name descname"><span class="pre">sp_to_sp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_format</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_format</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="reference internal" href="../_modules/pylstraight/api.html#sp_to_sp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pylstraight.sp_to_sp" title="Link to this definition">#</a></dt>
-<dd><p>Convert spectrum between different formats.</p>
+<dt class="sig sig-object py" id="pylstraight.fromfile">
+<span class="sig-prename descclassname"><span class="pre">pylstraight.</span></span><span class="sig-name descname"><span class="pre">fromfile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fs:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_length:</span> <span class="pre">float</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype:</span> <span class="pre">~numpy.dtype</span> <span class="pre">=</span> <span class="pre">&lt;class</span> <span class="pre">'numpy.float64'&gt;</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="reference internal" href="../_modules/pylstraight/api.html#fromfile"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pylstraight.fromfile" title="Link to this definition">#</a></dt>
+<dd><p>Read a STRAIGHT parameter from file.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>sp</strong><span class="classifier">np.ndarray [shape=(nframe, nfreq)]</span></dt><dd><p>The input spectrum.</p>
+<dt><strong>filename</strong><span class="classifier">str</span></dt><dd><p>The file to read.</p>
 </dd>
-<dt><strong>in_format</strong><span class="classifier">[‘db’, ‘log’, ‘linear’, ‘power’]</span></dt><dd><p>The format of the input spectrum.</p>
+<dt><strong>fs</strong><span class="classifier">int</span></dt><dd><p>The sampling frequency in Hz. If non-positive, the data is assumed to be F0,
+otherwise spectrum.</p>
 </dd>
-<dt><strong>out_format</strong><span class="classifier">[‘db’, ‘log’, ‘linear’, ‘power’]</span></dt><dd><p>The format of the output spectrum.</p>
+<dt><strong>frame_length</strong><span class="classifier">float</span></dt><dd><p>The frame length in msec. If None, the default value is used.</p>
+</dd>
+<dt><strong>dtype</strong><span class="classifier">np.dtype</span></dt><dd><p>The data type of the file.</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
-<dt><strong>out</strong><span class="classifier">np.ndarray [shape=(nframe, nfreq)]</span></dt><dd><p>The converted spectrum.</p>
+<dt><strong>out</strong><span class="classifier">np.ndarray [shape=(nframe,)] or [shape=(nframe, nfreq)]</span></dt><dd><p>The STRAIGHT parameter.</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">pylstraight</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pyls</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">sp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">0</span><span class="p">]])</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">pyls</span><span class="o">.</span><span class="n">sp_to_sp</span><span class="p">(</span><span class="n">sp</span><span class="p">,</span> <span class="s2">&quot;db&quot;</span><span class="p">,</span> <span class="s2">&quot;linear&quot;</span><span class="p">)</span>
-<span class="go">array([[3.16227766e-01, 1.00000000e+03, 1.00000000e+00]])</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">pyls</span><span class="o">.</span><span class="n">sp_to_sp</span><span class="p">(</span><span class="n">sp</span><span class="p">,</span> <span class="s2">&quot;db&quot;</span><span class="p">,</span> <span class="s2">&quot;log&quot;</span><span class="p">)</span>
-<span class="go">array([[-1.15129255,  6.90775528,  0.        ]])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f0</span> <span class="o">=</span> <span class="n">pyls</span><span class="o">.</span><span class="n">fromfile</span><span class="p">(</span><span class="s2">&quot;tests/reference/data.f0&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f0</span><span class="o">.</span><span class="n">shape</span>
+<span class="go">(239,)</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -505,20 +493,20 @@ is <em>inverse</em>.</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="synthesis.html"
+       href="conversion.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Synthesis</p>
+        <p class="prev-next-title">Conversion</p>
       </div>
     </a>
     <a class="right-next"
-       href="io.html"
+       href="constants.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">I/O</p>
+        <p class="prev-next-title">Constants</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -541,9 +529,9 @@ is <em>inverse</em>.</p>
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pylstraight.f0_to_f0"><code class="docutils literal notranslate"><span class="pre">f0_to_f0()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pylstraight.ap_to_ap"><code class="docutils literal notranslate"><span class="pre">ap_to_ap()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pylstraight.sp_to_sp"><code class="docutils literal notranslate"><span class="pre">sp_to_sp()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pylstraight.read"><code class="docutils literal notranslate"><span class="pre">read()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pylstraight.write"><code class="docutils literal notranslate"><span class="pre">write()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pylstraight.fromfile"><code class="docutils literal notranslate"><span class="pre">fromfile()</span></code></a></li>
 </ul>
   </nav></div>
 
