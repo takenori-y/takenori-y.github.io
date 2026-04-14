@@ -1,8 +1,12 @@
 [
     {
-        "name": "0.1.3 (stable)",
-        "version": "0.1.3",
+        "name": "0.1.4 (stable)",
+        "version": "0.1.4",
         "url": "https://takenori-y.github.io/lfeats/stable/"
+    },
+    {
+        "version": "0.1.3",
+        "url": "https://takenori-y.github.io/lfeats/0.1.3/"
     },
     {
         "version": "0.1.2",
