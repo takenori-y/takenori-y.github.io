@@ -422,6 +422,20 @@
             <span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">e</span></div>
 
 
+<div class="viewcode-block" id="Resampler.to">
+<a class="viewcode-back" href="../../../api/core.html#lfeats.Resampler.to">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">device</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Move the resampler to the specified device.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        device : str</span>
+<span class="sd">            The device to move the resampler to (e.g., &#39;cpu&#39; or &#39;cuda&#39;).</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">resampler_manager</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span></div>
+
+
 <div class="viewcode-block" id="Resampler.__call__">
 <a class="viewcode-back" href="../../../api/core.html#lfeats.Resampler.__call__">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="fm">__call__</span><span class="p">(</span>
