@@ -1,8 +1,12 @@
 [
     {
-	"name": "0.1.2 (stable)",
-	"version": "0.1.2",
+	"name": "0.1.3 (stable)",
+	"version": "0.1.3",
         "url": "https://takenori-y.github.io/pylstraight/stable/"
+    },
+    {
+        "version": "0.1.2",
+        "url": "https://takenori-y.github.io/pylstraight/0.1.2/"
     },
     {
         "version": "0.1.1",
