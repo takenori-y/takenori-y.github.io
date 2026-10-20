@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Moved</title>
+  <script>
+    (function () {
+      var moved = ["lfeats"];
+      var parts = location.pathname.split("/");
+      if (moved.indexOf(parts[1]) !== -1) {
+        location.replace("https://sp-nitech.github.io" + location.pathname + location.search + location.hash);
+      }
+    })();
+  </script>
+</head>
+<body>
+  <p>Page not found.</p>
+</body>
+</html>
